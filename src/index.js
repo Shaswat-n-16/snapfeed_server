@@ -30,7 +30,7 @@ app.use("/post", postRoutes);
 app.use("/comment", commentRoutes);
 
 app.get("/", (req, res) => {
-  res.send(`Server is running `);
+  res.send(`Verion 1.0 of Server is running `);
 });
 
 app.listen(PORT, () => {
