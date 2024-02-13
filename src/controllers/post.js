@@ -99,7 +99,11 @@ export const createPost = async (req, res) => {
 
     const response = await cloudinary.uploader.upload(
       req.body.image,
-      { folder: "Snapfeed", public_id: `${req.body.title}` },
+      {
+        folder: "Snapfeed",
+        public_id: `${req.body.title}`,
+        chunk_size: 10000000,
+      },
       function (error, result) {
         return result;
       }
